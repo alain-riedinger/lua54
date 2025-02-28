@@ -18,9 +18,9 @@ COPY .\lua.hpp   ..\%TARGET%\include\
 COPY .\luaconf.h ..\%TARGET%\include\
 
 IF "%TARGET%"=="Win32" (
-	CALL "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars32.bat"
+	CALL "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvars32.bat"
 ) ELSE (
-	CALL "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"
+	CALL "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvars64.bat"
 )
 
 CL -MP -MD -O2 -c -DLUA_BUILD_AS_DLL *.c
